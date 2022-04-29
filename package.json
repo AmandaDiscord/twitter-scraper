@@ -20,7 +20,6 @@
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
-  "peerDependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -61,15 +60,15 @@
     }
   ],
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^4.11.0",
-    "@types/node-fetch": "^2.5.10",
-    "husky": "^6.0.0",
-    "size-limit": "^4.11.0",
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "@types/centra": "^2.2.0",
+    "husky": "^7.0.4",
+    "size-limit": "^7.0.8",
     "tsdx": "^0.14.1",
-    "tslib": "^2.2.0",
-    "typescript": "^4.3.2"
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.4"
   },
   "dependencies": {
-    "node-fetch": "^2.6.1"
+    "centra": "^2.5.0"
   }
 }

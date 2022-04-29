@@ -1,24 +1,19 @@
-import fetch, { Response } from 'node-fetch';
+import fetch from 'centra';
 
 export class Request {
   static defaultHeaders = { authorization: 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA' };
 
-  public static async get(url: string, customHeaders?: Object): Promise<Response> {
+  public static async get(url: string, customHeaders?: Object): Promise<import("centra").Response> {
     let requestHeaders = this.defaultHeaders;
     if (customHeaders) requestHeaders = { ...this.defaultHeaders, ...customHeaders };
 
-    return await fetch(url, {
-      headers: requestHeaders,
-    });
+    return fetch(url, "GET").header(requestHeaders).send();
   }
 
-  public static async post(url: string, customHeaders?: Object): Promise<Response> {
+  public static async post(url: string, customHeaders?: Object): Promise<import("centra").Response> {
     let requestHeaders = this.defaultHeaders;
     if (customHeaders) requestHeaders = { ...this.defaultHeaders, ...customHeaders };
 
-    return await fetch(url, {
-      method: 'POST',
-      headers: requestHeaders,
-    });
+    return fetch(url, "POST").header(requestHeaders).send()
   }
 }
