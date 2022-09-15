@@ -20,7 +20,7 @@ export class TwitterScraper {
         this.buildGuestIdHeader()
       );
 
-      if (res.statusCode === 401) {
+      if (res.status === 401) {
         this.reloadGuestId();
         return this.getTweetMeta(tweetUrl);
       }
