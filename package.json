@@ -11,9 +11,6 @@
   "engines": {
     "node": ">=10"
   },
-  "scripts": {
-    "build": "tsc -p ."
-  },
   "name": "@tcortega/twitter-scraper",
   "description": "Twitter Scraper & Media Downloader. Scrape info from any tweet.",
   "author": "tcortega",
